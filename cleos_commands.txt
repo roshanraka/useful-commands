@@ -1,0 +1,51 @@
+/home/rosh/opt/mongodb/bin/mongod -f /home/rosh/opt/mongodb/mongod.conf
+
+export PATH=$PATH:/usr/local/eosio/bin
+
+nodeos -e -p eosio --plugin eosio::chain_api_plugin --plugin eosio::history_api_plugin 
+--delete-all-blocks
+
+PW5KENH2JFYQ2bPW4m6HPid8jdtoaDxqR8EWnF794NnDEqovkPxJq
+
+cleos set contract token ./contracts/eosio.token/ eosio.token.wasm eosio.token.abi
+
+Part 1
+
+PW5JvqzF6uDmW9ZTa95Cpa2EA37iQxd8dF74kbZVv2THvsnKAf1xE
+
+Private key: 5JgU77wt7M34DCTh6Xi1LLRw8pDUwZSPZ21bLU6VjpgtNV82Si4
+Public key: EOS71FCvHm7yNoQUoJ2DpekATQgPKVjzxrJ2E1n1GcKAzaQzQHCkx
+
+
+Private key: 5K93yFJfFp2c4nWgoHPGjSHC9hv3tCTErNfiiJHfiZoe9YYm1gL
+Public key: EOS7gSrtPrDSzuevQSQb3nc8JUSFAtGNMGdC3BWD3vFLKULMnekYQ
+
+
+cleos set account permission gs.acnt active '{"keys":[{"key":"PUT_gs.acnt_ACTIVE_PERMISSION_KEY_HERE", "weight":1}], "threshold": 1, "accounts":[{"permission":{"actor":"market.acnt","permission":"eosio.code"},"weight":1}], "waits":[] }' owner -p gs.acnt
+
+cleos set account permission wade active '{"keys":[{"key":"EOS4yPCMBiBnkRw2vyRSG8qWbB8QpwyMZVfNURrQLi7xJYyEMM9Ns", "weight":1}], "threshold": 1, "accounts":[{"permission":{"actor":"market","permission":"eosio.code"},"weight":1}], "waits":[] }' owner -p wade
+
+cleos set account permission anorak active '{"keys":[{"key":"EOS5Emn2R121fW29JJdwQUVgdJ8C84uHnWaV6F9xhnY9U3xXrkKMG", "weight":1}], "threshold": 1, "accounts":[{"permission":{"actor":"market","permission":"eosio.code"},"weight":1}], "waits":[] }' owner -p anorak
+
+
+// junglenet
+
+p2p-peer-address = jungle2.cryptolions.io:9876
+p2p-peer-address = jungle2.cryptolions.io:19876
+p2p-peer-address = jungle-p2p.eosio.cr:2086
+p2p-peer-address = peer.jungle.alohaeos.com:9876
+p2p-peer-address = 145.239.133.201:9876
+p2p-peer-address = 35.165.133.251:8888
+p2p-peer-address = jungle.eosgen.io:9876
+p2p-peer-address = jungle2.eosdac.io:9872
+p2p-peer-address = jungle.eosn.io:9876
+p2p-peer-address = jungle.eosbcn.com:2095
+p2p-peer-address = 18.223.252.15:9876
+p2p-peer-address = jungle.eosmetal.io:19876
+p2p-peer-address = jungle2-eos.blckchnd.com:9876
+p2p-peer-address = 88.99.193.44:9876
+p2p-peer-address = 88.12.21.79:9876
+
+
+
+
